@@ -1,0 +1,60 @@
+Problem
+
+Sharmi drives her car to work in one of the best mannered cities in India.
+
+Today, Sharmi is riding her car to the east along a long and narrow one-way road that runs west to east (assume this is the only road in the city). She is currently at kilometer 0 of the road, and her destination is at kilometer D; kilometers along the road are numbered from west to east.
+
+There are N other cars traveling east on the same road; all of them will go on traveling forever, and all of them are currently between Sharmi's car and her destination. The i-th of these cars is initially at kilometer Ki and is traveling at its maximum speed of Si kilometers per hour.
+
+The drivers of the cars are very polite, and a driver H1 will not pass (move ahead of) another car driver H2 that started off ahead of H1. (Two or more cars can share the same position for any amount of time; you may consider the cars to be single points.) Cars (other than Sharmi's) travel at their maximum speeds, except that whenever a car H1 catches up to another slower car H2, H1 reduces its speed to match the speed of H2.
+
+Sharmi's car, on the other hand, does not have a maximum speed and can travel at any speed that Sharmi chooses, as long as it does not pass another car. To ensure a smooth ride, Sharmi wants to choose a single constant "cruise control" speed for her car for the entire trip, from her current position to the destination, such that her car will not pass any other cars. What is the maximum such speed that she can choose?
+
+Input
+
+Test case begins with two integers D and N: the destination position of all of the cars (in kilometers) and the number of other cars on the road. Then, N lines follow. The i-th of those lines has two integers Ki and Si: the initial position (in kilometers) and maximum speed (in kilometers per hour) of the i-th car on the road.
+
+Output
+
+Output one line containing the maximum constant speed (in kilometers per hour) that Sharmi can use without colliding with other cars. It will be considered correct if it is within an absolute or relative error of 10^6 of the correct answer.
+Sample Cases
+
+Input
+
+Case 1
+
+------
+
+2525 1
+
+2400 5
+
+Case 2
+
+------
+
+300 2
+
+120 60
+
+60 90
+
+Case 3
+
+------
+
+100 2
+
+80 100
+
+70 10
+
+Case #1: 101.000000
+
+Case #2: 100.000000
+
+Case #3: 33.333333
+
+In Sample Case #1, there is one other (very slow!) car on the road; it will reach Sharmi's destination after 25 hours. Anything faster than 101 kilometers per hour would cause Sharmi to pass the car before reaching the destination.
+
+In Sample Case #2, there are two other cars on the road. The faster car will catch up to the slower car at kilometer 240 after 2 hours. Both cars will then go at the slower car's speed for 1 more hour, until the cars reach Sharmi's destination at kilometer 300. The maximum speed that Sharmi can choose without passing another car is 100 kilometers per hour.
