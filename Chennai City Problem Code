@@ -1,0 +1,15 @@
+import sys
+
+inp = []
+for line in sys.stdin:
+    l = list(map(int,line.strip().split()))
+    inp.append(l)
+    
+# print(inp)
+d,n = inp[0][0],inp[0][1]
+maxTym=0
+for rec in inp[1:]:
+    d1,s=rec[0],rec[1]
+    tym = (d-d1)/s
+    maxTym = max(tym,maxTym)
+print("{0:.6f}".format(d/maxTym))
